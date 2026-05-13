@@ -1,0 +1,8 @@
+{
+  "watch": ["source"],
+  "ext": ".js,.ts",
+  "env": {
+    "NODE_ENV": "local"
+  },
+  "exec": "npx ts-node ./source/index.ts"
+}
