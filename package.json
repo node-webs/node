@@ -2,9 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/build/web.js",
   "scripts": {
-    "dev": "npx nodemon"
+    "dev": "npx nodemon",
+    "start": "node build/web.js",
+    "build": "rm -rf ./build/ && tsc -p .",
+    "start:web": "cross-env NODE_ENV=production node build/web.js"
   },
   "keywords": [],
   "author": "",

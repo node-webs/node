@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta name="page-version" content="{{ csrfPart1 }}">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/script/common.css">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap'); */
+        @import url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/iropke/iropke-batang/font.css');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(90deg, white, pink);
+            /* font-family: "Sunflower", sans-serif; */
+            font-family: 'Iropke Batang', serif;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            position: relative;
+            width: 850px;
+            height: 550px;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .container.active .form-box {
+            /* 로그인 박스를 왼쪽으로 옮김 */
+            right: 50%;
+        }
+    </style>
+    {% block head %}<!-- 자식 페이지의 head 블록 내용 -->{% endblock %}
+</head>
+<body>
+    <div class="container {{ 'active' if not isSignin }}" data-is-display="{{ csrfPart2 }}">
+        {% block content %}<!-- 개별 페이지의 내용 -->{% endblock %}
+    </div>
+</body>
+</html>

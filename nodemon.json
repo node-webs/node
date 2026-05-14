@@ -4,5 +4,5 @@
   "env": {
     "NODE_ENV": "local"
   },
-  "exec": "npx ts-node ./source/index.ts"
+  "exec": "npx ts-node ./source/web.ts"
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/script/common.css">
+    {% block head %}<!-- 자식 페이지의 head 블록 내용 -->{% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block content %}<!-- 개별 페이지의 내용 -->{% endblock %}
+    </div>
+</body>
+</html>

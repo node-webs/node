@@ -1,0 +1,12 @@
+{% extends "./layout/web.layout.pet" %}
+
+{% block title %}[PET] 홈페이지{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/script/index.css">
+{% endblock %}
+
+{% block content %}
+    <h2>메인 콘텐츠 영역</h2>
+    <p class="indexx">이 영역은 1200px 너비 안에서 가운데 정렬되어 표시됩니다.</p>
+{% endblock %}
